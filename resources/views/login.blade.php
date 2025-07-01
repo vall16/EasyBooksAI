@@ -99,11 +99,16 @@
                     <div class="h-px flex-1 bg-slate-200 dark:bg-navy-500"></div>
                 </div>
                 <div class="flex space-x-4">
-                    <button
+                    <!-- <button
                         class="btn w-full space-x-3 border border-slate-300 font-medium text-slate-800 hover:bg-slate-150 focus:bg-slate-150 active:bg-slate-150/80 dark:border-navy-450 dark:text-navy-50 dark:hover:bg-navy-500 dark:focus:bg-navy-500 dark:active:bg-navy-500/90">
                         <img class="size-5.5" src="{{ asset('images/logos/google.svg') }}" alt="logo" />
                         <span>Google</span>
-                    </button>
+                    </button> -->
+                    <a href="{{ route('auth.google') }}" class="btn w-full space-x-3 border ...">
+                        <img class="size-5.5" src="{{ asset('images/logos/google.svg') }}" alt="logo" />
+                        <span>Google</span>
+                    </a>
+
                     <!-- <button
                         class="btn w-full space-x-3 border border-slate-300 font-medium text-slate-800 hover:bg-slate-150 focus:bg-slate-150 active:bg-slate-150/80 dark:border-navy-450 dark:text-navy-50 dark:hover:bg-navy-500 dark:focus:bg-navy-500 dark:active:bg-navy-500/90">
                         <img class="size-5.5" src="{{ asset('images/logos/github.svg') }}" alt="logo" />
