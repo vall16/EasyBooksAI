@@ -8,14 +8,66 @@
             </p>
         </a>
     </div>
-    <div class="hidden w-full place-items-center lg:grid">
-        <div class="w-full max-w-lg p-6">
-            <img class="w-full" x-show="!$store.global.isDarkModeEnabled"
-                src="{{ asset('images/book3.png') }}" alt="image" />
-            <img class="w-full" x-show="$store.global.isDarkModeEnabled"
-                src="{{ asset('images/illustrations/dashboard-check-dark.svg') }}" alt="image" />
-        </div>
-    </div>
+    
+<div class="hidden lg:grid lg:grid-cols-2 w-full max-w-6xl mx-auto px-6 min-h-screen">
+  <!-- Testo a sinistra -->
+   <div class="flex flex-col justify-center text-left pr-6">
+
+  <div class="flex flex-col justify-start mt-[30vh]">
+    <p class="mb-6 text-black text-lg leading-relaxed font-light tracking-wide">
+      <span class="text-2xl font-extrabold text-purple-400 block mb-2">
+        Create your next bestseller in minutes
+      </span>
+      <span class="block mb-2">
+        <em class="text-gray-600 text-sm">No writing skills required</em>
+      </span>
+      <span class="block">
+        With the power of <span class="font-semibold text-purple-400">generative AI</span>, 
+        <strong class="text-black">Easy Books AI</strong> helps you turn your raw ideas into polished, 
+        ready-to-publish books on <span class="font-semibold text-purple-400">Amazon KDP</span>.
+      </span>
+      <br class="hidden md:block" />
+      <span class="block mt-3 text-gray-600">
+        Focus on your vision. 
+        <span class="font-semibold text-black">We’ll handle the words, formatting, and structure — instantly.</span>
+      </span>
+    </p>
+  </div>
+  </div>
+
+  <!-- Immagine a destra -->
+  <!-- <div class="w-full max-w-lg p-6 mt-[30vh]">
+    <img
+      class="w-full"
+      x-show="!$store.global.isDarkModeEnabled"
+      src="{{ asset('images/book3.png') }}"
+      alt="image"
+    />
+    <img
+      class="w-full"
+      x-show="$store.global.isDarkModeEnabled"
+      src="{{ asset('images/illustrations/dashboard-check-dark.svg') }}"
+      alt="image"
+    />
+  </div> -->
+  <div class="w-full max-w-lg p-6 flex justify-center">
+    <img
+      class="w-full max-w-[400px]"
+      x-show="!$store.global.isDarkModeEnabled"
+      src="{{ asset('images/book3.png') }}"
+      alt="image"
+    />
+    <img
+      class="w-full max-w-[400px]"
+      x-show="$store.global.isDarkModeEnabled"
+      src="{{ asset('images/illustrations/dashboard-check-dark.svg') }}"
+      alt="image"
+    />
+  </div>
+
+</div>
+
+    
     <main class="flex w-full flex-col items-center bg-white dark:bg-navy-700 lg:max-w-md">
         <div class="flex w-full max-w-sm grow flex-col justify-center p-5">
             <div class="text-center">
