@@ -562,7 +562,7 @@ class PagesController extends Controller
     {
         return view('pages/apps-jobs-board');
     }
-
+    // WILLY
     public function dashboardsCrmAnalytics()
     {
         return view('pages/dashboards-crm-analytics');
