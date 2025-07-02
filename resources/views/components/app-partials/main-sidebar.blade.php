@@ -10,9 +10,9 @@
             </a>
         </div>
 
-        <!-- Main Sections Links -->
+        <!-- Main Sections Links WILLY -->
         <div class="is-scrollbar-hidden flex grow flex-col space-y-4 overflow-y-auto pt-6">
-            <!-- Dashobardss -->
+            <!-- Dashobardss /dashboard utente -->
             <a href="{{ route('dashboards/crm-analytics') }}"
                 class="flex size-11 items-center justify-center rounded-lg outline-hidden transition-colors duration-200 {{ $routePrefix === 'dashboards' ? 'text-primary hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-navy-600 bg-primary/10 dark:text-accent-light dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90' : 'hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25' }}"
                 x-tooltip.placement.right="'Dashboards'">

@@ -33,7 +33,7 @@ class GoogleController extends Controller
 
             Auth::login($user);
 
-            return redirect()->intended(route('dashboard')); // O altra rotta dopo login
+            return redirect()->intended(route('pippo')); // O altra rotta dopo login
 
         } catch (\Exception $e) {
             return redirect('/login')->withErrors('Login Google fallito');

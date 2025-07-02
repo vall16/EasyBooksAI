@@ -1,6 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log; 
+
+
 
 class PagesController extends Controller
 {
@@ -565,8 +569,69 @@ class PagesController extends Controller
     // WILLY
     public function dashboardsCrmAnalytics()
     {
-        return view('pages/dashboards-crm-analytics');
+     
+        $user = auth()->user();
+        $email = $user->email;
+        $encodedEmail = urlencode($email);
+
+        Log::info("dashboardsCrmAnalytics chiamato dall'utente: {$email}");
+
+        $response = Http::withHeaders([
+            'accept' => 'application/json',
+            'Authorization' => 'Bearer ' . config('services.vibes_api.token'),
+        ])->get("https://api.vibesrl.com/user_books?user_id={$encodedEmail}");
+
+        if ($response->successful()) {
+            $books = $response->json();
+            Log::info('Books caricati con successo', ['count' => count($books), 'books_sample' => array_slice($books, 0, 3)]);
+        } else {
+            // $books = [];
+            // Log::warning('Errore nel caricamento dei books per ' . $email);
+             $status = $response->status();
+            $body = $response->body();
+
+            Log::warning('Errore nel caricamento dei books', [
+                'user_email' => $email,
+                'http_status' => $status,
+                'response_body' => $body,
+            ]);
+
+            $books = [];
+            }
+
+        return view('pages.dashboard', compact('user', 'books'));
     }
+
+    public function downloadBook($id)
+    {
+        $response = Http::withHeaders([
+            'Authorization' => 'Bearer ' . config('services.vibes_api.token'),
+            'accept' => 'application/pdf',
+        ])->get("https://api.vibesrl.com/download/{$id}");
+
+        if ($response->successful()) {
+            return response($response->body(), 200)
+                ->header('Content-Type', 'application/pdf')
+                ->header('Content-Disposition', 'attachment; filename="libro_{$id}.pdf"');
+        } else {
+            return back()->withErrors(['download_error' => 'Errore durante il download del file']);
+        }
+    }
+
+    public function getBookDetails($id)
+    {
+        $response = Http::withHeaders([
+            'accept' => 'application/json',
+            'Authorization' => 'Bearer ' . config('services.vibes_api.token'),
+        ])->get("https://api.vibesrl.com/book/{$id}");
+
+        if ($response->successful()) {
+            return response()->json($response->json());
+        } else {
+            return response()->json(['error' => 'Libro non trovato'], 404);
+        }
+    }
+
 
     public function dashboardsOrders()
     {

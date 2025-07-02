@@ -5,9 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     ProfileController,
     GoogleController,
-    BookController,
-    DashboardController,
-    StripeController
+    // BookController,
+    // DashboardController,
+    // StripeController
 };
 
 /*
@@ -149,7 +149,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/apps/jobs-board', [PagesController::class, 'appsJobsBoard'])->name('apps/jobs-board');
     Route::get('/apps/travel', [PagesController::class, 'appsTravel'])->name('apps/travel');
 
-    Route::get('/dashboards/crm-analytics', [PagesController::class, 'dashboardsCrmAnalytics'])->name('dashboards/crm-analytics');
+    //willy
+    Route::get('/dashboards/crm-analytics', [DashboardController::class, 'dashboardsCrmAnalytics'])->name('dashboards/crm-analytics');
+    
     Route::get('/dashboards/orders', [PagesController::class, 'dashboardsOrders'])->name('dashboards/orders');
     Route::get('/dashboards/crypto-1', [PagesController::class, 'dashboardsCrypto1'])->name('dashboards/crypto-1');
     Route::get('/dashboards/crypto-2', [PagesController::class, 'dashboardsCrypto2'])->name('dashboards/crypto-2');
@@ -175,9 +177,12 @@ Route::middleware('auth')->group(function () {
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('auth.google');
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
+Route::get('/api/books/{id}', [DashboardController::class, 'getBookDetails']);
+
 // Dashboard (protetta)
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/download-book/{id}', [DashboardController::class, 'downloadBook']);
-    Route::get('/api/books/{id}', [DashboardController::class, 'getBookDetails']);
-});
+// Route::middleware(['auth', 'verified'])->group(function () {
+//     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+//     Route::get('/download-book/{id}', [DashboardController::class, 'downloadBook']);
+//     Route::get('/api/books/{id}', [DashboardController::class, 'getBookDetails']);
+// });
+//  Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboards/crm-analytics');

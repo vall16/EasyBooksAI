@@ -39,5 +39,13 @@ return [
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
         'redirect' => env('GOOGLE_REDIRECT_URI'),
     ],
+     
+    'vibes_api' => [
+        'token' => env('API_TOKEN'),
+    ],
+    
+    'stripe' => [
+    'secret' => env('STRIPE_SECRET'),
+    ],
 
 ];
