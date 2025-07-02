@@ -457,17 +457,23 @@
                   <tbody>
                     @foreach ($books as $book)
                     <tr class="border-t border-gray-600 hover:bg-gray-700">
+                    <!-- <tr
+                      class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
+                    > -->
                         <td @click="fetchDetails({{ $book['id'] }})"
                             class="px-6 py-4 cursor-pointer text-purple-400 hover:underline">
                             {{ $book['book_title'] ?? '-' }}
                         </td>
-                        <td class="px-6 py-4">
-                            {{ $book['user']['name'] ?? 'N/A' }}
+                        <!-- <td class="px-6 py-4"> -->
+                        <td class="whitespace-nowrap px-4 py-3 sm:px-5">
+                            {{ $book['author_name'] ?? 'N/A' }}
                         </td>
-                        <td class="px-6 py-4">
+                        <!-- <td class="px-6 py-4"> -->
+                        <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                             {{ $book['book_language'] ?? '-' }}
                         </td>
-                        <td class="px-6 py-4">
+                        <!-- <td class="px-6 py-4"> -->
+                        <td class="whitespace-nowrap px-4 py-3 sm:px-5">
                             @if (!empty($book['processed']) && !empty($book['filename']))
                                 <a href="{{ url('/download-book/' . $book['id']) }}" target="_blank" title="Scarica PDF">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-400 hover:text-orange-600"
@@ -486,6 +492,39 @@
                     </tbody>
                 </table>
               </div>
+
+              <!-- Modal di dettaglio-->
+                        <div 
+                            x-show="open" 
+                            class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+                            x-transition
+                            style="display: none;"
+                            @click="open = false"
+                        >
+                            <div class="bg-gray-900 p-6 rounded shadow-lg max-w-lg w-full relative text-white">
+                                <button @click="open = false" class="absolute top-2 right-2 text-white font-bold text-xl">&times;</button>
+                                <template x-if="details">
+                                    <div>
+                                        <p><strong>Description:</strong> <span x-text="details.book_description"></span></p>
+                                        <p><strong>Maximum chapters:</strong> <span x-text="details.max_chapters"></span></p>
+                                        <p><strong>Maximum words per chapter:</strong> <span x-text="details.max_words_per_chapter"></span></p>
+                                        <p><strong>Processed:</strong> <span x-text="details.processed ? 'Yes' : 'No'"></span></p>
+                                        <p><strong>Ready:</strong> <span x-text="details.ready ? 'Yes' : 'No'"></span></p>
+                                        <p><strong>Sent:</strong> <span x-text="details.sent ? 'Yes' : 'No'"></span></p>
+                                        <p><strong>Filename:</strong> <span x-text="details.filename"></span></p>
+                                        <p><strong>Creation date:</strong> <span x-text="new Date(details.created_at).toLocaleString()"></span></p>
+                                        <p><strong>Referrer IP:</strong> <span x-text="details.referrer_ip"></span></p>
+                                        <p><strong>User email:</strong> <span x-text="details.user_email"></span></p>
+                                        <p><strong>Book ID:</strong> <span x-text="details.id"></span></p>
+                                        <p><strong>User ID:</strong> <span x-text="details.user_id"></span></p>
+                                        <p><strong>Error message:</strong> <span x-text="details.error_message || 'None'"></span></p>
+                                    </div>
+                                </template>
+                                <template x-if="!details">
+                                    <p>Loading details...</p>
+                                </template>
+                            </div>
+                        </div>
 
               <div
                 class="flex flex-col justify-between space-y-4 px-4 py-4 sm:flex-row sm:items-center sm:space-y-0 sm:px-5"

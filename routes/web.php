@@ -6,7 +6,7 @@ use App\Http\Controllers\{
     ProfileController,
     GoogleController,
     // BookController,
-    // DashboardController,
+    DashboardController,
     // StripeController
 };
 
