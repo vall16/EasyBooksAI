@@ -38,7 +38,7 @@
                         </div>
                         <div class="mt-5">
                             <span class="text-4xl tracking-tight {{ $pacchetto['text_color'] }} dark:text-accent-light">$
-                                {{ $pacchetto['price'] }}</span>/month
+                                {{ $pacchetto['price'] }}</span>
                         </div>
                         <div class="mt-8 space-y-4 text-left">
                             @foreach($pacchetto['description_lines'] as $line)
