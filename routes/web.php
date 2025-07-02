@@ -30,6 +30,7 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
+    //WILLY
     Route::get('/', [PagesController::class, 'dashboardsCrmAnalytics'])->name('index');
 
     Route::get('/elements/avatar', [PagesController::class, 'elementsAvatar'])->name('elements/avatar');
@@ -149,9 +150,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/apps/jobs-board', [PagesController::class, 'appsJobsBoard'])->name('apps/jobs-board');
     Route::get('/apps/travel', [PagesController::class, 'appsTravel'])->name('apps/travel');
 
-    //willy
-    Route::get('/dashboards/crm-analytics', [DashboardController::class, 'dashboardsCrmAnalytics'])->name('dashboards/crm-analytics');
-     Route::get('/layouts/price-list-3', [PagesController::class, 'layoutsPriceList3'])->name('layouts/price-list-3');
+    //willy: imposto la rotta che appare nell' url (/dashboard) ! pagina di apertura
+    Route::get('/dashboard', [PagesController::class, 'dashboardsCrmAnalytics'])->name('dashboards/crm-analytics');
+    
+     Route::get('/sellpage', [PagesController::class, 'layoutsPriceList3'])->name('layouts/price-list-3');
+    Route::get('/checkout/{plan}', [BookCreatorController::class, 'checkout'])->name('checkout');
+
 
     Route::get('/dashboards/orders', [PagesController::class, 'dashboardsOrders'])->name('dashboards/orders');
     Route::get('/dashboards/crypto-1', [PagesController::class, 'dashboardsCrypto1'])->name('dashboards/crypto-1');
