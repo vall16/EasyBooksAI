@@ -54,7 +54,7 @@
     <img
       class="w-full max-w-[400px]"
       x-show="!$store.global.isDarkModeEnabled"
-      src="{{ asset('images/book3.png') }}"
+      src="{{ asset('images/book4.png') }}"
       alt="image"
     />
     <img

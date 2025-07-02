@@ -1,8 +1,14 @@
 <?php
 
 use App\Http\Controllers\PagesController;
-use App\Http\Controllers\GoogleController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{
+    ProfileController,
+    GoogleController,
+    BookController,
+    DashboardController,
+    StripeController
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -165,6 +171,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboards/widget-contacts', [PagesController::class, 'dashboardsWidgetContacts'])->name('dashboards/widget-contacts');
 });
 
-
+//WILLY
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('auth.google');
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+
+// Dashboard (protetta)
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/download-book/{id}', [DashboardController::class, 'downloadBook']);
+    Route::get('/api/books/{id}', [DashboardController::class, 'getBookDetails']);
+});
