@@ -178,6 +178,7 @@ Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
 Route::get('/api/books/{id}', [DashboardController::class, 'getBookDetails']);
+Route::get('/download-book/{id}', [DashboardController::class, 'downloadBook']);
 
 // Dashboard (protetta)
 // Route::middleware(['auth', 'verified'])->group(function () {

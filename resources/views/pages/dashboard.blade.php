@@ -295,38 +295,8 @@
                     <tr
                       class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
                     >
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">1</td>
-                      <td
-                        class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
-                      >
-                        Web Application
-                      </td>
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        John Doe
-                      </td>
-
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        <!<div
-                          x-tooltip.primary="'42% Completed'"
-                          class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                        >
-                          <div
-                            class="w-5/12 rounded-full bg-primary dark:bg-accent"
-                          ></div>
-                        </div> -->
-                      <!-- </td>
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        <div
-                          class="badge space-x-2.5 px-0 text-primary dark:text-accent-light"
-                        >
-                          <div class="size-2 rounded-full bg-current"></div>
-                          <span>In Progress</span>
-                        </div>
-                      </td> -->
-                      <!-- <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        03 Sep
-                      </td> -->
-                    <!-- </tr>
+                      
+                    <! </tr>
                     <tr
                       class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
                     >
@@ -365,92 +335,18 @@
                     <tr
                       class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
                     >
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">3</td>
-                      <td
-                        class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
-                      >
-                        Android App
-                      </td>
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        Bailie Coulman
-                      </td>
-
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        <div
-                          x-tooltip.error="'Cancelled'"
-                          class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                        >
-                          <div class="w-full rounded-full bg-error"></div>
-                        </div>
-                      </td>
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        <div class="badge space-x-2.5 px-0 text-error">
-                          <div class="size-2 rounded-full bg-current"></div>
-                          <span>Cancelled</span>
-                        </div>
-                      </td>
+                      
                       <td class="whitespace-nowrap px-4 py-3 sm:px-5">N/A</td>
                     </tr>
                     <tr
                       class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
                     >
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">4</td>
-                      <td
-                        class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
-                      >
-                        Desktop App
-                      </td>
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        Richardo Aldren
-                      </td>
-
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        <div
-                          x-tooltip.success="'Completed'"
-                          class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                        >
-                          <div class="w-full rounded-full bg-success"></div>
-                        </div>
-                      </td>
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        <div class="badge space-x-2.5 px-0 text-success">
-                          <div class="size-2 rounded-full bg-current"></div>
-                          <span>Completed</span>
-                        </div>
-                      </td>
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        25 Aug
-                      </td>
+                      
                     </tr>
                     <tr
                       class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
                     >
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">5</td>
-                      <td
-                        class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
-                      >
-                        CRM App
-                      </td>
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        Nolan Doe
-                      </td>
-
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        <div
-                          x-tooltip.secondary="'Pending'"
-                          class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                        >
-                          <div class="w-1/12 rounded-full bg-secondary"></div>
-                        </div>
-                      </td>
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        <div
-                          class="badge space-x-2.5 px-0 text-secondary dark:text-secondary-light"
-                        >
-                          <div class="size-2 rounded-full bg-current"></div>
-                          <span>Pending</span>
-                        </div>
-                      </td>
+                      
                       <td class="whitespace-nowrap px-4 py-3 sm:px-5">3 Oct</td>
                     </tr>
                   </tbody>  -->
