@@ -154,7 +154,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [PagesController::class, 'dashboardsCrmAnalytics'])->name('dashboards/crm-analytics');
     
      Route::get('/sellpage', [PagesController::class, 'layoutsPriceList3'])->name('layouts/price-list-3');
-    Route::get('/checkout/{plan}', [BookCreatorController::class, 'checkout'])->name('checkout');
+     Route::get('/bookcreation', [PagesController::class, 'bookcreation'])->name('bookcreation');
+     Route::get('/checkout/{plan}', [BookCreatorController::class, 'checkout'])->name('checkout');
 
 
     Route::get('/dashboards/orders', [PagesController::class, 'dashboardsOrders'])->name('dashboards/orders');

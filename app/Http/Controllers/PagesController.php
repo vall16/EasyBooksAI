@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Log;
 
 
 
+
 class PagesController extends Controller
 {
     public function elementsAvatar()
@@ -600,6 +601,26 @@ class PagesController extends Controller
             }
 
         return view('pages.dashboard', compact('user', 'books'));
+    }
+    // WILLY
+     public function bookcreation(Request $request)
+    {
+        $packCode = $request->query('pack'); // esempio: "base"
+
+        $pacchetti = config('pacchetti');
+
+        if (!array_key_exists($packCode, $pacchetti)) {
+            abort(404, 'Pacchetto non valido');
+        }
+
+        $pacchetto = $pacchetti[$packCode];
+
+        // Salva il pacchetto nella sessione attiva
+        session()->put('book_data.pack', $packCode);
+
+        
+        return view('pages.forms-layout-v4', compact('pacchetto', 'packCode'));
+
     }
 
     public function downloadBook($id)
