@@ -129,7 +129,7 @@
             <div class="col-span-12 lg:col-span-4">
                 <div class="card space-y-5 p-4 sm:p-5">
                     <label class="block">
-                    <span class="font-medium text-slate-600 dark:text-navy-100">Author</span>
+                    <span class="font-medium font-bold text-slate-600 dark:text-navy-100">Author</span>
                         <input
                             type="text"
                             name="author_name"
@@ -141,7 +141,7 @@
                     </label>
 
                    <label class="block">
-                    <span class="font-medium text-slate-600 dark:text-navy-100">Author's Email</span>
+                    <span class="font-medium font-bold text-slate-600 dark:text-navy-100">Author's Email</span>
                     <input
                         type="text"
                         name="user_email"
