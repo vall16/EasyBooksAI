@@ -1,5 +1,5 @@
 <!-- WILLY -->
-<x-app-layout>
+<x-base-layout>
     <div class="flex items-center justify-center min-h-screen bg-black text-white">
         <div class="text-center max-w-xl">
             <p class="lead mt-4"></p>
@@ -15,13 +15,13 @@
                 You will receive a notification via email (<strong>{{ auth()->user()->email }}</strong>) as soon as it's ready.
             </p>
 
-            <a href="{{ route('dashboard') }}"
+            <a href="{{ route('dashboards/crm-analytics') }}"
                class="inline-block mt-4 px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition">
                 Go to your books
             </a>
         </div>
     </div>
-</x-app-layout>
+</x-base-layout>
 
 
 

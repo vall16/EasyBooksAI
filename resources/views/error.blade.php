@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-base-layout>
     <div class="flex items-center justify-center min-h-screen bg-black text-white">
         <div class="text-center max-w-xl">
             <h1 class="text-2xl font-bold text-red-600 mb-4">❌ An error has occurred</h1>
@@ -14,5 +14,5 @@
             </a>
         </div>
     </div>
-</x-app-layout>
+</x-base-layout>
 

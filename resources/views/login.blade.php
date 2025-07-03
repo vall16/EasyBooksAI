@@ -15,7 +15,7 @@
 
   <div class="flex flex-col justify-start mt-[30vh]">
     <p class="mb-6 text-black text-lg leading-relaxed font-light tracking-wide">
-      <span class="text-2xl font-extrabold text-purple-400 block mb-2">
+      <span class="text-2xl font-extrabold text-black-400 block mb-2">
         Create your next bestseller in minutes
       </span>
       <span class="block mb-2">
