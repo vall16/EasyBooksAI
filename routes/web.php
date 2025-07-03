@@ -31,7 +31,7 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
     //WILLY
-    Route::get('/', [PagesController::class, 'dashboardsCrmAnalytics'])->name('index');
+    Route::get('/', [PagesController::class, 'dashboardsCrmAnalyticss'])->name('index');
 
     Route::get('/elements/avatar', [PagesController::class, 'elementsAvatar'])->name('elements/avatar');
     Route::get('/elements/alert', [PagesController::class, 'elementsAlert'])->name('elements/alert');
@@ -150,7 +150,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/apps/jobs-board', [PagesController::class, 'appsJobsBoard'])->name('apps/jobs-board');
     Route::get('/apps/travel', [PagesController::class, 'appsTravel'])->name('apps/travel');
 
-    //willy: imposto la rotta che appare nell' url (/dashboard) ! pagina di apertura
+    //willy: imposto la rotta che appare nell' url (/dashboard) ! è pagina di apertura dopo
     Route::get('/dashboard', [PagesController::class, 'dashboardsCrmAnalytics'])->name('dashboards/crm-analytics');
     
      Route::get('/sellpage', [PagesController::class, 'layoutsPriceList3'])->name('layouts/price-list-3');

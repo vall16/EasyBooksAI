@@ -14,12 +14,28 @@
                 </h2>
             </div>
              {{-- Qui inseriamo il riepilogo pacchetto --}}
-         <div class="text-center px-3 py-2 bg-slate-900 rounded-md shadow-sm border border-slate-700 max-w-md mx-auto">
+         <!-- <div class="text-center px-3 py-2 bg-slate-900 rounded-md shadow-sm border border-slate-700 max-w-md mx-auto">
             <p class="mb-0 text-gray-300 font-medium text-base">
                 You have selected the Package: <strong class="text-gray-100">{{ $pacchetto['name'] }}</strong><br>
                 Price: <strong class="text-gray-100">€{{ number_format($pacchetto['price'], 2, ',', '.') }}</strong>
             </p>
-        </div>
+        </div> -->
+        {{-- Riepilogo pacchetto selezionato --}}
+<div class="bg-white dark:bg-navy-700 border border-slate-200 dark:border-navy-600 rounded-lg shadow p-4 max-w-lg mx-auto mt-4 text-center">
+    <div class="flex items-center justify-center space-x-2 mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zm0 2c-2.21 0-4 1.79-4 4v1h8v-1c0-2.21-1.79-4-4-4zm-7 7h14v2H5v-2z"/>
+        </svg>
+        <h3 class="text-lg font-semibold text-slate-700 dark:text-navy-100">Package Summary</h3>
+    </div>
+    <p class="text-slate-600 dark:text-navy-100 mb-1">
+        You selected: <span class="font-semibold text-primary dark:text-accent-light">{{ $pacchetto['name'] }}</span>
+    </p>
+    <p class="text-slate-500 dark:text-navy-200">
+        Price: <span class="font-bold text-slate-800 dark:text-white">€{{ number_format($pacchetto['price'], 2, ',', '.') }}</span>
+    </p>
+</div>
+
 
 
 <form method="POST" action="{{ route('book.startCheckout') }}">

@@ -72,7 +72,7 @@
                 </button>
               </div>
             </div>
-            <div x-show="isFilterExpanded" x-collapse>
+            <!-- <div x-show="isFilterExpanded" x-collapse>
               <div class="max-w-2xl py-3">
                 <div
                   class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:gap-6"
@@ -248,7 +248,7 @@
                   </button>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div x-data="bookModal()">
 
             <div class="card mt-3">
