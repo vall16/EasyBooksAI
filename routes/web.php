@@ -5,9 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     ProfileController,
     GoogleController,
-    // BookController,
+    BookController,
     DashboardController,
-    // StripeController
+    StripeController
 };
 
 /*
@@ -156,7 +156,19 @@ Route::middleware('auth')->group(function () {
      Route::get('/sellpage', [PagesController::class, 'layoutsPriceList3'])->name('layouts/price-list-3');
      Route::get('/bookcreation', [PagesController::class, 'bookcreation'])->name('bookcreation');
      Route::get('/checkout/{plan}', [BookCreatorController::class, 'checkout'])->name('checkout');
+     //chiamata di creazione libro
+     Route::post('/checkout', [BookController::class, 'startCheckout'])->name('book.startCheckout');
+    //flusso stripe...
+    Route::get('/stripe/checkout', [StripeController::class, 'checkout'])->name('stripe.checkout');
 
+    Route::get('/book/complete', [BookController::class, 'complete2'])->name('book.complete2');
+    // errore nel pagamento
+    Route::get('/book/cancel', function () {
+        return redirect()->route('book.create')->withErrors('Pagamento annullato.');
+    })->name('book.cancel');
+
+    //pagina gestione errori...
+    Route::view('/error', 'error')->name('error');
 
     Route::get('/dashboards/orders', [PagesController::class, 'dashboardsOrders'])->name('dashboards/orders');
     Route::get('/dashboards/crypto-1', [PagesController::class, 'dashboardsCrypto1'])->name('dashboards/crypto-1');

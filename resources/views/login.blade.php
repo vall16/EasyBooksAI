@@ -156,10 +156,18 @@
                         <img class="size-5.5" src="{{ asset('images/logos/google.svg') }}" alt="logo" />
                         <span>Google</span>
                     </button> -->
-                    <a href="{{ route('auth.google') }}" class="btn w-full space-x-3 border ...">
+                    <!-- <a href="{{ route('auth.google') }}" class="btn w-full space-x-3 border ...">
                         <img class="size-5.5" src="{{ asset('images/logos/google.svg') }}" alt="logo" />
                         <span>Google</span>
-                    </a>
+                    </a> -->
+
+                    <a href="{{ route('auth.google') }}"
+   
+   class="btn mt-10 h-10 w-full bg-primary font-medium text-white hover:bg-primary-focus focus:bg-primary-focus active:bg-primary-focus/90 dark:bg-accent dark:hover:bg-accent-focus dark:focus:bg-accent-focus dark:active:bg-accent/90"> 
+   <img class="size-5.5" src="{{ asset('images/logos/google.svg') }}" alt="logo" />
+    <span>Google</span>
+</a>
+
 
                     <!-- <button
                         class="btn w-full space-x-3 border border-slate-300 font-medium text-slate-800 hover:bg-slate-150 focus:bg-slate-150 active:bg-slate-150/80 dark:border-navy-450 dark:text-navy-50 dark:hover:bg-navy-500 dark:focus:bg-navy-500 dark:active:bg-navy-500/90">
