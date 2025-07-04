@@ -31,7 +31,7 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
     //WILLY ... quando clicco sul logo per tornare in welcome
-    Route::get('/', [PagesController::class, 'dashboardsCrmAnalytics'])->name('index');
+    Route::get('/', [PagesController::class, 'dashboard'])->name('index');
 
     Route::get('/elements/avatar', [PagesController::class, 'elementsAvatar'])->name('elements/avatar');
     Route::get('/elements/alert', [PagesController::class, 'elementsAlert'])->name('elements/alert');
