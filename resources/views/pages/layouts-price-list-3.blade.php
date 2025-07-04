@@ -84,8 +84,7 @@
         </div>
     </main>
 <!-- </x-app-layout>  -->
-<!-- @php
-    $icons = [
+<!-- @ph
         // Icona per pacchetto base
         '<svg xmlns="http://www.w3.org/2000/svg" class="inline size-16 %s dark:text-accent-light" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5V6.75A2.25 2.25 0 016.25 4.5H20v12.5M4 19.5H6.5" /></svg>',
 

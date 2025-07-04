@@ -15,7 +15,8 @@
                 You will receive a notification via email (<strong>{{ auth()->user()->email }}</strong>) as soon as it's ready.
             </p>
 
-            <a href="{{ route('dashboards/crm-analytics') }}"
+            <!-- <a href="{{ route('dashboards/crm-analytics') }}" -->
+            <a href="{{ /dashboard }}"
                class="inline-block mt-4 px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition">
                 Go to your books
             </a>

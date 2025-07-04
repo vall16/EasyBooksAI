@@ -333,12 +333,14 @@
               <!-- Modal di dettaglio-->
                         <div 
                             x-show="open" 
-                            class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+                           
+                            class="fixed inset-0 bg-white bg-opacity-90 flex justify-center items-center z-50"
+
                             x-transition
                             style="display: none;"
                             @click="open = false"
                         >
-                            <div class="bg-gray-900 p-6 rounded shadow-lg max-w-lg w-full relative text-white">
+                            <div class="bg-white p-6 rounded shadow-lg max-w-lg w-full relative text-black">
                                 <button @click="open = false" class="absolute top-2 right-2 text-white font-bold text-xl">&times;</button>
                                 <template x-if="details">
                                     <div>

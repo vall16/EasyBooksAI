@@ -151,8 +151,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/apps/travel', [PagesController::class, 'appsTravel'])->name('apps/travel');
 
     //willy: imposto la rotta che appare nell' url (/dashboard) ! è pagina di apertura dopo
-    Route::get('/dashboard', [PagesController::class, 'dashboardsCrmAnalytics'])->name('dashboards/crm-analytics');
-    //  Route::get('/sellpage', [PagesController::class, 'layoutsPriceList3'])->name('layouts/price-list-3');
+    // Route::get('/dashboard', [PagesController::class, 'dashboardsCrmAnalytics'])->name('dashboards/crm-analytics');
+    Route::get('/dashboard', [PagesController::class, 'dashboard'])->name('dashboards/crm-analytics');
+    
      Route::get('/sellpage', [PagesController::class, 'sellpage']);
     
      Route::get('/bookcreation', [PagesController::class, 'bookcreation'])->name('bookcreation');
