@@ -22,9 +22,9 @@
         <em class="text-gray-600 text-sm">No writing skills required</em>
       </span>
       <span class="block">
-        With the power of <span class="font-semibold text-purple-400">generative AI</span>, 
+        With the power of <span class="font-semibold text-black-400">generative AI</span>, 
         <strong class="text-black">Easy Books AI</strong> helps you turn your raw ideas into polished, 
-        ready-to-publish books on <span class="font-semibold text-purple-400">Amazon KDP</span>.
+        ready-to-publish books on <span class="font-semibold text-black-400">Amazon KDP</span>.
       </span>
       <br class="hidden md:block" />
       <span class="block mt-3 text-gray-600">

@@ -291,65 +291,6 @@
                     </tr>
                   </thead>
 
-                  <!-- <tbody>
-                    <tr
-                      class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                    >
-                      
-                    <! </tr>
-                    <tr
-                      class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                    >
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">2</td>
-                      <td
-                        class="whitespace-nowrap px-4 py-3 font-medium text-slate-700 dark:text-navy-100 sm:px-5"
-                      >
-                        Android App
-                      </td>
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        Sabina Mores
-                      </td>
-
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        <div
-                          x-tooltip.primary="'77% Completed'"
-                          class="progress h-2 bg-slate-150 dark:bg-navy-500"
-                        >
-                          <div
-                            class="w-9/12 rounded-full bg-primary dark:bg-accent"
-                          ></div>
-                        </div>
-                      </td>
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        <div
-                          class="badge space-x-2.5 px-0 text-primary dark:text-accent-light"
-                        >
-                          <div class="size-2 rounded-full bg-current"></div>
-                          <span>In Progress</span>
-                        </div>
-                      </td>
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">
-                        16 Sep
-                      </td>
-                    </tr>
-                    <tr
-                      class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                    >
-                      
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">N/A</td>
-                    </tr>
-                    <tr
-                      class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                    >
-                      
-                    </tr>
-                    <tr
-                      class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
-                    >
-                      
-                      <td class="whitespace-nowrap px-4 py-3 sm:px-5">3 Oct</td>
-                    </tr>
-                  </tbody>  -->
                   <tbody>
                     @foreach ($books as $book)
                     <tr class="border-t border-gray-600 hover:bg-gray-700">
@@ -357,7 +298,7 @@
                       class="border-y border-transparent border-b-slate-200 dark:border-b-navy-500"
                     > -->
                         <td @click="fetchDetails({{ $book['id'] }})"
-                            class="px-6 py-4 cursor-pointer text-purple-400 hover:underline">
+                            class="px-6 py-4 cursor-pointer text-primary hover:underline">
                             {{ $book['book_title'] ?? '-' }}
                         </td>
                         <!-- <td class="px-6 py-4"> -->
