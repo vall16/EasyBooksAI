@@ -152,9 +152,11 @@ Route::middleware('auth')->group(function () {
 
     //willy: imposto la rotta che appare nell' url (/dashboard) ! è pagina di apertura dopo
     Route::get('/dashboard', [PagesController::class, 'dashboardsCrmAnalytics'])->name('dashboards/crm-analytics');
+    //  Route::get('/sellpage', [PagesController::class, 'layoutsPriceList3'])->name('layouts/price-list-3');
+     Route::get('/sellpage', [PagesController::class, 'sellpage']);
     
-     Route::get('/sellpage', [PagesController::class, 'layoutsPriceList3'])->name('layouts/price-list-3');
      Route::get('/bookcreation', [PagesController::class, 'bookcreation'])->name('bookcreation');
+     
      Route::get('/checkout/{plan}', [BookCreatorController::class, 'checkout'])->name('checkout');
      //chiamata di creazione libro
      Route::post('/checkout', [BookController::class, 'startCheckout'])->name('book.startCheckout');

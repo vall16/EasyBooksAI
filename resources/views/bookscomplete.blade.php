@@ -1,11 +1,11 @@
 <!-- WILLY -->
 <x-base-layout>
-    <div class="flex items-center justify-center min-h-screen bg-black text-white">
+    <div class="flex items-center justify-center min-h-screen bg-white text-black">
         <div class="text-center max-w-xl">
             <p class="lead mt-4"></p>
             <p class="lead mt-4"></p>
 
-            <h1 class="text-2xl font-bold text-purple-400">Payment completed successfully!!!</h1>
+            <h1 class="text-2xl font-bold text-purple-600">Payment completed successfully!!!</h1>
 
             <p class="lead mt-4">
                 Thank you for your purchase! Your book is currently being generated.
@@ -22,7 +22,3 @@
         </div>
     </div>
 </x-base-layout>
-
-
-
-

@@ -176,10 +176,11 @@
                                 x-init="$el._x_tom = new Tom($el, { create: false, sortField: { field: 'text', direction: 'asc' } })">
                                 
                                 <option value="">Select the category</option>
+                                <option value="Essay">Essay</option>
                                 <option value="Fairy Tale">Fairy Tale</option>   
                                 <option value="History">History</option>
                                 <option value="Short Novel">Short Novel</option>
-                                <option value="Science">Science</option>
+                                
                             </select>
                         </label>
 

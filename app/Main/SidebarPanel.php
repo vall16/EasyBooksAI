@@ -406,10 +406,10 @@ class SidebarPanel
                                 'title' => 'Price List 2',
                                 'route_name' => 'layouts/price-list-2'
                             ],
-                            'layouts_price_list_3' => [
-                                'title' => 'Price List 3',
-                                'route_name' => 'layouts/price-list-3'
-                            ],
+                            // 'layouts_price_list_3' => [
+                            //     'title' => 'Price List 3',
+                            //     'route_name' => 'layouts/price-list-3'
+                            // ],
                             'layouts_price_list_4' => [
                                 'title' => 'Price List 4',
                                 'route_name' => 'layouts/price-list-4'

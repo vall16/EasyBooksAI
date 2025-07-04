@@ -409,9 +409,14 @@ class PagesController extends Controller
         return view('pages/layouts-price-list-2');
     }
 
-    public function layoutsPriceList3()
+    // public function layoutsPriceList3()
+    // {
+    //     return view('pages/layouts-price-list-3');
+    // }
+    public function sellpage()
     {
-        return view('pages/layouts-price-list-3');
+        // return view('pages/layouts-price-list-3');
+        return view('pages/sellpage');
     }
 
     public function layoutsPriceList4()

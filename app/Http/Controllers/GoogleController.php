@@ -34,7 +34,11 @@ class GoogleController extends Controller
             Auth::login($user);
 
             //forzo la pagina di vendita dopo il login google!
-            return redirect()->intended(route('layouts/price-list-3'));
+            // return redirect()->intended(route('layouts/price-list-3'));
+            return redirect('/sellpage');
+
+            
+
 
 
         } catch (\Exception $e) {

@@ -1,5 +1,5 @@
-<!-- WILLY sostituita da sellpage-->
-<!-- <x-app-layout title="Price List 3" is-header-blur="true">
+<!-- WILLY -->
+<x-app-layout title="Price List 3" is-header-blur="true">
     <main class="main-content w-full place-items-center px-[var(--margin-x)] pb-12">
         <div class="py-5 text-center lg:py-6">
             <p class="text-sm uppercase">Are you new here?</p>
@@ -16,24 +16,14 @@
                         @if(!empty($pacchetto['recommended']))
                             <div class="absolute top-0 right-0 p-3">
                                 <div class="badge rounded-full bg-info/10 text-info dark:bg-info/15">
-                                    Recommended
+                                    Recommended 
                                 </div>
                             </div>
                         @endif
 
-                        <!-- <div class="mt-8">
-                            <!- Icona fissa o dinamica (qui esempio fisso) -->
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg"
-                                class="inline size-16 {{ $pacchetto['text_color'] }} dark:text-accent-light" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                        </div> --> 
-
                         <div class="mt-8">
-    {!! $pacchetto['icon'] !!}
-<!-- </div>
+                            {!! $pacchetto['icon'] !!}
+                        </div>
 
                         <div class="mt-5">
                             <h4 class="text-xl font-semibold text-slate-700 dark:text-navy-100">
@@ -83,18 +73,6 @@
 
         </div>
     </main>
-<!-- </x-app-layout>  -->
-<!-- @php
-    $icons = [
-        // Icona per pacchetto base
-        '<svg xmlns="http://www.w3.org/2000/svg" class="inline size-16 %s dark:text-accent-light" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5V6.75A2.25 2.25 0 016.25 4.5H20v12.5M4 19.5H6.5" /></svg>',
+</x-app-layout>
 
-        // Icona per pacchetto medio
-        '<svg xmlns="http://www.w3.org/2000/svg" class="inline size-16 %s dark:text-accent-light" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.75 4.5h14.5a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H4.75a.75.75 0 01-.75-.75V5.25a.75.75 0 01.75-.75zm2 4.25h11.5M6.75 14h7.5" /></svg>',
-
-        // Icona per pacchetto premium
-        '<svg xmlns="http://www.w3.org/2000/svg" class="inline size-16 %s dark:text-accent-light" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 4.5h14.5a.75.75 0 01.75.75v14.5a.75.75 0 01-.75.75H3.75a.75.75 0 01-.75-.75V5.25a.75.75 0 01.75-.75zm2 3.75h11.5M5.75 12h8.5M5.75 16.5h5.5" /></svg>',
-    ];
-    $index = 0;
-@endphp -->
 

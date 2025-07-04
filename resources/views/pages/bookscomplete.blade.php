@@ -16,7 +16,7 @@
             </p>
 
             <a href="{{ route('dashboards/crm-analytics') }}"
-               class="inline-block mt-4 px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition">
+               class="inline-block mt-4 px-6 py-2 bg-primary text-white rounded hover:bg-purple-700 transition">
                 Go to your books
             </a>
         </div>
