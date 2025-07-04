@@ -30,8 +30,8 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
-    //WILLY
-    Route::get('/', [PagesController::class, 'dashboardsCrmAnalyticss'])->name('index');
+    //WILLY ... quando clicco sul logo per tornare in welcome
+    Route::get('/', [PagesController::class, 'dashboardsCrmAnalytics'])->name('index');
 
     Route::get('/elements/avatar', [PagesController::class, 'elementsAvatar'])->name('elements/avatar');
     Route::get('/elements/alert', [PagesController::class, 'elementsAlert'])->name('elements/alert');
@@ -169,6 +169,9 @@ Route::middleware('auth')->group(function () {
 
     //pagina gestione errori...
     Route::view('/error', 'error')->name('error');
+
+    // condizioni di vendita
+    Route::view('/conditions', 'conditions')->name('conditions');
 
     Route::get('/dashboards/orders', [PagesController::class, 'dashboardsOrders'])->name('dashboards/orders');
     Route::get('/dashboards/crypto-1', [PagesController::class, 'dashboardsCrypto1'])->name('dashboards/crypto-1');
