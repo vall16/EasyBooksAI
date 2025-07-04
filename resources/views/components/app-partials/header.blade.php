@@ -57,7 +57,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <div :class="isShowPopper && 'show'" class="popper-root" x-ref="popperRoot">
+                        <!-- <div :class="isShowPopper && 'show'" class="popper-root" x-ref="popperRoot">
                             <div
                                 class="popper-box flex max-h-[calc(100vh-6rem)] w-80 flex-col rounded-lg border border-slate-150 bg-white shadow-soft dark:border-navy-800 dark:bg-navy-700 dark:shadow-soft-dark">
                                 <div x-data="{ activeTab: 'tabAll' }"
@@ -378,7 +378,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </template>
 

@@ -39,7 +39,10 @@
                             <h4 class="text-xl font-semibold text-slate-700 dark:text-navy-100">
                                 {{ $pacchetto['name'] }}
                             </h4>
-                            <p>the starter choice</p>
+                            <p class="text-sm text-slate-500 dark:text-navy-200">
+                                {{ $pacchetto['short_description'] }}
+                            </p>
+
                         </div>
                         <div class="mt-5">
                             <span class="text-4xl tracking-tight {{ $pacchetto['text_color'] }} dark:text-accent-light">$
