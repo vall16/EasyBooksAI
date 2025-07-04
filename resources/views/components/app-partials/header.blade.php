@@ -4,7 +4,7 @@
         <!-- Header Items -->
         <div class="flex w-full items-center justify-between">
             <!-- Left: Sidebar Togglee Button -->
-            <div class="size-7">
+            <!-- <div class="size-7">
                 <button
                     class="menu-toggle cursor-pointer ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-hidden focus:outline-hidden dark:text-accent-light/80"
                     :class="$store.global.isSidebarExpanded && 'active'"
@@ -13,6 +13,17 @@
                     <span></span>
                     <span></span>
                 </button>
+            </div> -->
+            <!-- div che consente a dark/alert andare a destra -->
+            <div class="size-7">
+                <!-- <button
+                    class="menu-toggle cursor-pointer ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-hidden focus:outline-hidden dark:text-accent-light/80"
+                    :class="$store.global.isSidebarExpanded && 'active'"
+                    @click="$store.global.isSidebarExpanded = !$store.global.isSidebarExpanded">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button> -->
             </div>
 
             <!-- Right: Header buttons -->
