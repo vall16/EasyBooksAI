@@ -173,8 +173,7 @@ Route::middleware('auth')->group(function () {
     //pagina gestione errori...
     Route::view('/error', 'error')->name('error');
 
-    // condizioni di vendita
-    Route::view('/conditions', 'conditions')->name('conditions');
+   
 
     Route::get('/dashboards/orders', [PagesController::class, 'dashboardsOrders'])->name('dashboards/orders');
     Route::get('/dashboards/crypto-1', [PagesController::class, 'dashboardsCrypto1'])->name('dashboards/crypto-1');
@@ -203,6 +202,9 @@ Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallba
 
 Route::get('/api/books/{id}', [DashboardController::class, 'getBookDetails']);
 Route::get('/download-book/{id}', [DashboardController::class, 'downloadBook']);
+
+ // condizioni di vendita fuori dal login
+Route::view('/conditions', 'conditions')->name('conditions');
 
 // Dashboard (protetta)
 // Route::middleware(['auth', 'verified'])->group(function () {
