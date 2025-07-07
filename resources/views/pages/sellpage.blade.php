@@ -1,5 +1,5 @@
 <!-- WILLY -->
-<x-app-layout title="Price List 3" is-header-blur="true">
+<x-app-layout title="Sell Page" is-header-blur="true">
     <main class="main-content w-full place-items-center px-[var(--margin-x)] pb-12">
         <div class="py-5 text-center lg:py-6">
             <p class="text-sm uppercase">Are you new here?</p>

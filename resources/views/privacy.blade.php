@@ -8,7 +8,7 @@
 
         <h2 class="text-2xl font-bold text-slate-800">1. Data Controller</h2>
         <p>
-            The data controller is <strong>[Vibe s.r.l]</strong>, located at <strong>[Company Address]</strong>.
+            The data controller is <strong>[Vibe s.r.l]</strong>, located at <strong>[Via Tito Minniti 152 - 21040 Cislago (VA)]</strong>.
             You can contact us at <strong>[email@example.com]</strong> for any questions about your data.
         </p>
 

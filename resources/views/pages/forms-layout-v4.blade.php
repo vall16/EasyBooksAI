@@ -1,5 +1,5 @@
 <!-- WILLY -->
-<x-app-layout title="Form Layout v4" is-header-blur="true">
+<x-app-layout title="Book Creation" is-header-blur="true">
     <!-- Main Content Wrapper -->
     <main class="main-content w-full px-[var(--margin-x)] pb-8">
         <div class="flex flex-col items-center justify-between space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6">
