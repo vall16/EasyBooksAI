@@ -40,7 +40,7 @@
             
                 class="flex size-11 items-center justify-center rounded-lg outline-hidden transition-colors duration-200 {{ $routePrefix === 'apps' ? 'text-primary hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-navy-600 bg-primary/10 dark:text-accent-light dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90' : 'hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25' }}"
                 x-tooltip.placement.right="'Sell Page'">
-                <svg class="size-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg class="size-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M5 8H19V16C19 17.8856 19 18.8284 18.4142 19.4142C17.8284 20 16.8856 20 15 20H9C7.11438 20 6.17157 20 5.58579 19.4142C5 18.8284 5 17.8856 5 16V8Z"
                         fill="currentColor" fill-opacity="0.3" />
@@ -53,7 +53,14 @@
                     <rect x="4" y="8" width="16" height="3" rx="1"
                         fill="currentColor" />
                     <path d="M12 11V15" stroke="currentColor" stroke-linecap="round" />
-                </svg>
+                </svg> -->
+                <svg class="size-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="3" y="5" width="18" height="14" rx="2" fill="currentColor" fill-opacity="0.3"/>
+  <path d="M3 9H21" stroke="currentColor" stroke-width="1.5"/>
+  <rect x="7" y="13" width="4" height="2" rx="0.5" fill="currentColor"/>
+  <rect x="13" y="13" width="2" height="2" rx="0.5" fill="currentColor"/>
+</svg>
+
             </a>
 
 
