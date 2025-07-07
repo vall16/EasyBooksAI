@@ -48,7 +48,7 @@
             </tbody>
           </table> -->
           <!-- Griglia card -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+            <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
             <template x-for="book in paginatedBooks" :key="book.id">
                 <div
                 class="bg-white dark:bg-navy-700 rounded-xl shadow-md p-4 transition hover:shadow-lg hover:ring-1 hover:ring-primary cursor-pointer"
@@ -78,8 +78,48 @@
                 </div>
                 </div>
             </template>
-            </div>
+            </div> -->
         <!-- Griglia card -->
+         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+  <template x-for="book in paginatedBooks" :key="book.id">
+    <div
+      class="bg-white dark:bg-navy-700 rounded-xl shadow-md p-4 transition hover:shadow-lg hover:ring-1 hover:ring-primary cursor-pointer"
+      @click="fetchDetails(book.id)"
+    >
+      <!-- 👇 Copertina del libro -->
+      <div class="w-full mb-3">
+        <img
+          :src="book.cover_url ?? '/images/placeholder-cover.jpg'"
+          alt="Book Cover"
+          class="rounded-md w-full h-48 object-cover"
+        />
+      </div>
+
+      <h3 class="text-lg font-semibold text-primary mb-1" x-text="book.book_title"></h3>
+      <p class="text-sm text-slate-500 dark:text-navy-200 mb-2" x-text="'by ' + (book.author_name ?? 'N/A')"></p>
+      <p class="text-xs mb-2">
+        <span class="inline-block rounded-full bg-slate-100 dark:bg-navy-600 text-slate-600 dark:text-navy-100 px-2 py-0.5 text-[11px] font-medium"
+              x-text="book.book_language ?? '-'"></span>
+      </p>
+      <div>
+        <template x-if="book.processed && book.filename">
+          <a :href="`/download-book/${book.id}`"
+             target="_blank"
+             class="inline-flex items-center space-x-1 text-orange-600 hover:text-orange-800 text-sm font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6 2a2 2 0 0 0-2 2v16c0 1.103.897 2 2 2h12a2 2 0 0 0 2-2V8.414A1.99 1.99 0 0 0 19.586 7L15 2.414A1.99 1.99 0 0 0 13.586 2H6zm7 1.414L18.586 9H14a1 1 0 0 1-1-1V3.414zM8 13h1.5a1.5 1.5 0 0 1 0 3H8v-3zm3 0h1v3h-1v-3zm2.5 0H15a1 1 0 0 1 0 2h-1v1h-1.5v-3z" />
+            </svg>
+            <span>Download PDF</span>
+          </a>
+        </template>
+        <template x-if="!(book.processed && book.filename)">
+          <span class="text-yellow-500 font-semibold text-sm">Not Ready</span>
+        </template>
+      </div>
+    </div>
+  </template>
+</div>
+
 
         </div>
 
@@ -127,7 +167,7 @@
         return {
           books,
           currentPage: 0,
-          perPage: 10,
+          perPage: 9,
           modalOpen: false,
           modalDetails: null,
 
