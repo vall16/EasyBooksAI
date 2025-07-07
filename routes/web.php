@@ -205,6 +205,7 @@ Route::get('/download-book/{id}', [DashboardController::class, 'downloadBook']);
 
  // condizioni di vendita fuori dal login
 Route::view('/conditions', 'conditions')->name('conditions');
+Route::view('/privacy', 'privacy')->name('privacy');
 
 // Dashboard (protetta)
 // Route::middleware(['auth', 'verified'])->group(function () {
