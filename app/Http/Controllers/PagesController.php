@@ -572,41 +572,7 @@ class PagesController extends Controller
     {
         return view('pages/apps-jobs-board');
     }
-    // WILLY
-    // public function dashboardsCrmAnalytics()
-    // {
-     
-    //     $user = auth()->user();
-    //     $email = $user->email;
-    //     $encodedEmail = urlencode($email);
-
-    //     Log::info("dashboardsCrmAnalytics chiamato dall'utente: {$email}");
-
-    //     $response = Http::withHeaders([
-    //         'accept' => 'application/json',
-    //         'Authorization' => 'Bearer ' . config('services.vibes_api.token'),
-    //     ])->get("https://api.vibesrl.com/user_books?user_id={$encodedEmail}");
-
-    //     if ($response->successful()) {
-    //         $books = $response->json();
-    //         Log::info('Books caricati con successo', ['count' => count($books), 'books_sample' => array_slice($books, 0, 3)]);
-    //     } else {
-    //         // $books = [];
-    //         // Log::warning('Errore nel caricamento dei books per ' . $email);
-    //          $status = $response->status();
-    //         $body = $response->body();
-
-    //         Log::warning('Errore nel caricamento dei books', [
-    //             'user_email' => $email,
-    //             'http_status' => $status,
-    //             'response_body' => $body,
-    //         ]);
-
-    //         $books = [];
-    //         }
-
-    //     return view('pages.dashboard', compact('user', 'books'));
-    // }
+    
 
     public function dashboard()
     {
@@ -615,7 +581,7 @@ class PagesController extends Controller
         $email = $user->email;
         $encodedEmail = urlencode($email);
 
-        Log::info("dashboardsCrmAnalytics chiamato dall'utente: {$email}");
+        Log::info("dashboard chiamato dall'utente: {$email}");
 
         $response = Http::withHeaders([
             'accept' => 'application/json',
@@ -640,7 +606,8 @@ class PagesController extends Controller
             $books = [];
             }
 
-        return view('pages.dashboard', compact('user', 'books'));
+        // return view('pages.dashboard', compact('user', 'books'));
+        return view('pages.dashboard_new', compact('user', 'books'));
     }
     // WILLY
      public function bookcreation(Request $request)
