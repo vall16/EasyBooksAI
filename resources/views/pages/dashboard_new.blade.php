@@ -18,7 +18,7 @@
                 <th class="bg-slate-200 px-4 py-3 text-slate-800">Title</th>
                 <th class="bg-slate-200 px-4 py-3 text-slate-800">Author</th>
                 <th class="bg-slate-200 px-4 py-3 text-slate-800">Language</th>
-                <th class="bg-slate-200 px-4 py-3 text-slate-800">Status</th>
+                <th class="bg-slate-200 px-4 py-3 text-slate-800">Book File</th>
               </tr>
             </thead>
             <tbody>
