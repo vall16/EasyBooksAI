@@ -54,6 +54,7 @@
     <img
       class="w-full max-w-[400px]"
       x-show="!$store.global.isDarkModeEnabled"
+      
       src="{{ asset('images/welcome.png') }}"
       alt="image"
     />
