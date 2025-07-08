@@ -606,8 +606,8 @@ class PagesController extends Controller
             $books = [];
             }
 
-        // return view('pages.dashboard', compact('user', 'books'));
-        return view('pages.dashboard_new', compact('user', 'books'));
+        return view('pages.dashboard', compact('user', 'books'));
+        // return view('pages.dashboard_new', compact('user', 'books'));
     }
     // WILLY
      public function bookcreation(Request $request)
