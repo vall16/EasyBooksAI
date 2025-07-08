@@ -3,8 +3,9 @@
     <div class="header-container relative flex w-full bg-white dark:bg-navy-750 print:hidden">
         <!-- Header Items -->
         <div class="flex w-full items-center justify-between">
-            <!-- Left: Sidebar Togglee Button -->
-            <!-- <div class="size-7">
+            <!-- Left: Sidebar Togglee Button compare SOLO sul MOBILE !!-->
+            <div class="size-7 block lg:hidden">
+
                 <button
                     class="menu-toggle cursor-pointer ml-0.5 flex size-7 flex-col justify-center space-y-1.5 text-primary outline-hidden focus:outline-hidden dark:text-accent-light/80"
                     :class="$store.global.isSidebarExpanded && 'active'"
@@ -13,7 +14,8 @@
                     <span></span>
                     <span></span>
                 </button>
-            </div> -->
+                
+            </div>
             <!-- div che consente a dark/alert andare a destra -->
             <div class="size-7">
                 <!-- <button

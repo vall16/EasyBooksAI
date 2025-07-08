@@ -5,8 +5,7 @@
         <!-- Application Logo -->
         <div class="flex pt-4">
             <a href="/">
-                <!-- <img class="size-11 transition-transform duration-500 ease-in-out hover:rotate-[360deg]"
-                    src="{{ asset('images/app-logo.svg') }}" alt="logo" /> -->
+                
                 <img class="size-11 transition-transform duration-500 ease-in-out hover:rotate-[360deg]"
                     src="{{ asset('images/book12.png') }}" alt="logo" />
             </a>
@@ -14,21 +13,12 @@
 
         <!-- Main Sections Links WILLY -->
         <div class="is-scrollbar-hidden flex grow flex-col space-y-4 overflow-y-auto pt-6">
-            <!-- Dashobardss /dashboard utente -->
-            <!-- <a href="{{ route('dashboards/crm-analytics') }}" -->
+            <!-- dashboard utente -->
             <a href="/dashboard"
             
                 class="flex size-11 items-center justify-center rounded-lg outline-hidden transition-colors duration-200 {{ $routePrefix === 'dashboards' ? 'text-primary hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-navy-600 bg-primary/10 dark:text-accent-light dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90' : 'hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25' }}"
                 x-tooltip.placement.right="'Dashboard'">
-                <!-- <svg class="size-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <path fill="currentColor" fill-opacity=".3"
-                        d="M5 14.059c0-1.01 0-1.514.222-1.945.221-.43.632-.724 1.453-1.31l4.163-2.974c.56-.4.842-.601 1.162-.601.32 0 .601.2 1.162.601l4.163 2.974c.821.586 1.232.88 1.453 1.31.222.43.222.935.222 1.945V19c0 .943 0 1.414-.293 1.707C18.414 21 17.943 21 17 21H7c-.943 0-1.414 0-1.707-.293C5 20.414 5 19.943 5 19v-4.94Z" />
-                    <path fill="currentColor"
-                        d="M3 12.387c0 .267 0 .4.084.441.084.041.19-.04.4-.204l7.288-5.669c.59-.459.885-.688 1.228-.688.343 0 .638.23 1.228.688l7.288 5.669c.21.163.316.245.4.204.084-.04.084-.174.084-.441v-.409c0-.48 0-.72-.102-.928-.101-.208-.291-.355-.67-.65l-7-5.445c-.59-.459-.885-.688-1.228-.688-.343 0-.638.23-1.228.688l-7 5.445c-.379.295-.569.442-.67.65-.102.208-.102.448-.102.928v.409Z" />
-                    <path fill="currentColor" d="M11.5 15.5h1A1.5 1.5 0 0 1 14 17v3.5h-4V17a1.5 1.5 0 0 1 1.5-1.5Z" />
-                    <path fill="currentColor"
-                        d="M17.5 5h-1a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5Z" />
-                </svg> -->
+                
                 <!-- //una libreria nello scaffale -->
                 <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M4 2h2v20H4V2zm4 0h2v20H8V2zm4 0h6a2 2 0 012 2v16a2 2 0 01-2 2h-6V2zm2 6h2v2h-2V8zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2z"/>
@@ -36,32 +26,18 @@
 
             </a>
 
-            <!-- Apps -->
-            <!-- <a href="{{ route('apps/list') }}" -->
+            <!-- sellpage -->
             <a href="/sellpage"
             
                 class="flex size-11 items-center justify-center rounded-lg outline-hidden transition-colors duration-200 {{ $routePrefix === 'apps' ? 'text-primary hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:bg-navy-600 bg-primary/10 dark:text-accent-light dark:hover:bg-navy-450 dark:focus:bg-navy-450 dark:active:bg-navy-450/90' : 'hover:bg-primary/20 focus:bg-primary/20 active:bg-primary/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25' }}"
                 x-tooltip.placement.right="'Sell Page'">
-                <!-- <svg class="size-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M5 8H19V16C19 17.8856 19 18.8284 18.4142 19.4142C17.8284 20 16.8856 20 15 20H9C7.11438 20 6.17157 20 5.58579 19.4142C5 18.8284 5 17.8856 5 16V8Z"
-                        fill="currentColor" fill-opacity="0.3" />
-                    <path
-                        d="M12 8L11.7608 5.84709C11.6123 4.51089 10.4672 3.5 9.12282 3.5V3.5C7.68381 3.5 6.5 4.66655 6.5 6.10555V6.10555C6.5 6.97673 6.93539 7.79026 7.66025 8.2735L9.5 9.5"
-                        stroke="currentColor" stroke-linecap="round" />
-                    <path
-                        d="M12 8L12.2392 5.84709C12.3877 4.51089 13.5328 3.5 14.8772 3.5V3.5C16.3162 3.5 17.5 4.66655 17.5 6.10555V6.10555C17.5 6.97673 17.0646 7.79026 16.3397 8.2735L14.5 9.5"
-                        stroke="currentColor" stroke-linecap="round" />
-                    <rect x="4" y="8" width="16" height="3" rx="1"
-                        fill="currentColor" />
-                    <path d="M12 11V15" stroke="currentColor" stroke-linecap="round" />
-                </svg> -->
+                
                 <svg class="size-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="3" y="5" width="18" height="14" rx="2" fill="currentColor" fill-opacity="0.3"/>
-  <path d="M3 9H21" stroke="currentColor" stroke-width="1.5"/>
-  <rect x="7" y="13" width="4" height="2" rx="0.5" fill="currentColor"/>
-  <rect x="13" y="13" width="2" height="2" rx="0.5" fill="currentColor"/>
-</svg>
+                    <rect x="3" y="5" width="18" height="14" rx="2" fill="currentColor" fill-opacity="0.3"/>
+                    <path d="M3 9H21" stroke="currentColor" stroke-width="1.5"/>
+                    <rect x="7" y="13" width="4" height="2" rx="0.5" fill="currentColor"/>
+                    <rect x="13" y="13" width="2" height="2" rx="0.5" fill="currentColor"/>
+                    </svg>
 
             </a>
 

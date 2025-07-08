@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- WILLY -->
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -52,7 +53,10 @@
             <x-app-partials.main-sidebar></x-app-partials.main-sidebar>
 
             <!-- Sidebar Panel -->
-            <x-app-partials.sidebar-panel></x-app-partials.sidebar-panel>
+             <div class="hidden">
+
+                <x-app-partials.sidebar-panel></x-app-partials.sidebar-panel>
+            </div>
         </div>
 
         <!-- App Header -->

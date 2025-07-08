@@ -1,5 +1,5 @@
 <?php
-
+// WILLY
 namespace App\Http\View\Composers;
 
 use App\Main\SidebarPanel;
@@ -40,6 +40,7 @@ class SidebarComposer
                     break;
                 default:
                     $view->with('sidebarMenu', SidebarPanel::dashboards());
+                    
             }
             
             $view->with('allSidebarItems', SidebarPanel::all());

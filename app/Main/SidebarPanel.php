@@ -578,7 +578,7 @@ class SidebarPanel
             ]
         ];
     }
-
+// WILLY
     public static function dashboards()
     {
         return [
