@@ -85,17 +85,23 @@
          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
             <template x-for="book in paginatedBooks" :key="book.id">
               
-              <div
+              <!-- <div
                 class="relative bg-white dark:bg-navy-700 rounded-lg shadow-md p-0 transition hover:shadow-xl hover:scale-[1.02] hover:ring-2 hover:ring-primary cursor-pointer overflow-hidden group"
                 @click="fetchDetails(book.id)"
                 style="aspect-ratio: 2 / 3;"
+              > -->
+              <div
+                class="relative bg-white dark:bg-navy-700 rounded-md shadow-lg p-4 pt-6 transition hover:shadow-2xl hover:scale-[1.015] cursor-pointer overflow-hidden group border border-slate-300 dark:border-slate-600"
+                @click="fetchDetails(book.id)"
+                style="aspect-ratio: 2 / 3; box-shadow: inset -6px 0 8px -6px rgba(0,0,0,0.1);" 
               >
+                <!-- Rilegatura -->
+                <div class="absolute top-0 left-0 h-full w-4 bg-gradient-to-b from-slate-200 to-slate-400 dark:from-slate-600 dark:to-slate-800 shadow-inner z-10"></div>
+
 
               <!-- 👇 Copertina del libro -->
               <div class="w-full mb-3">
-              <!-- finta rilegatura laterale -->
-              <div class="absolute top-0 left-0 h-full w-2 bg-slate-300 dark:bg-slate-600 z-10"></div>
-
+              
             
               <!-- //copertina fake in attesa di db -->
               <img
