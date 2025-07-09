@@ -1,3 +1,5 @@
+
+<!-- WILLY -->
 <x-app-layout title="Dashboard" is-header-blur="true">
   <main class="main-content w-full pb-8">
 
@@ -81,18 +83,27 @@
             </div> -->
         <!-- Griglia card -->
          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-  <template x-for="book in paginatedBooks" :key="book.id">
-    <div
-      class="bg-white dark:bg-navy-700 rounded-xl shadow-md p-4 transition hover:shadow-lg hover:ring-1 hover:ring-primary cursor-pointer"
-      @click="fetchDetails(book.id)"
-    >
-      <!-- 👇 Copertina del libro -->
-      <div class="w-full mb-3">
-        <img
-          :src="book.cover_url ?? '/images/placeholder-cover.jpg'"
-          alt="Book Cover"
-          class="rounded-md w-full h-48 object-cover"
-        />
+            <template x-for="book in paginatedBooks" :key="book.id">
+              
+              <div
+                class="relative bg-white dark:bg-navy-700 rounded-lg shadow-md p-0 transition hover:shadow-xl hover:scale-[1.02] hover:ring-2 hover:ring-primary cursor-pointer overflow-hidden group"
+                @click="fetchDetails(book.id)"
+                style="aspect-ratio: 2 / 3;"
+              >
+
+              <!-- 👇 Copertina del libro -->
+              <div class="w-full mb-3">
+              <!-- finta rilegatura laterale -->
+              <div class="absolute top-0 left-0 h-full w-2 bg-slate-300 dark:bg-slate-600 z-10"></div>
+
+            
+              <!-- //copertina fake in attesa di db -->
+              <img
+              :src="book.cover_url || `https://picsum.photos/seed/book${book.id}/300/400`"
+              alt="Book Cover"
+              class="rounded-md w-full h-48 object-cover"
+              />
+
       </div>
 
       <h3 class="text-lg font-semibold text-primary mb-1" x-text="book.book_title"></h3>
