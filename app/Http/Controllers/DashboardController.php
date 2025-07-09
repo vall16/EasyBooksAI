@@ -53,16 +53,6 @@ class DashboardController extends Controller
         }
     }
 
-    //  public function dashboardsOrders()
-    // {
-    //     return view('pages/dashboards-orders');
-    // }
-
-    // public function dashboardsCrmAnalytics()
-    // {
-    //     // return view('pages.dashboards-crm-analytics'); // oppure altro nome se diverso
-    //     return view('pages.dashboards'); // oppure altro nome se diverso
-    // }
 
 
 }

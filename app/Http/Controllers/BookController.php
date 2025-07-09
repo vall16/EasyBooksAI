@@ -8,53 +8,7 @@ use Illuminate\Support\Facades\Log;
 
 class BookController extends Controller
 {
-    // public function startCheckout(Request $request)
-    // {
-    //     $validated = $request->validate([
-    //         'user_email' => 'required|email',
-    //         'author_name' => 'required|string',
-    //         'book_title' => 'required|string',
-    //         'book_description' => 'required|string',
-    //         'book_language' => 'required|string',
-    //         'min_chapters' => 'required|integer|min:1',
-    //         'min_words_per_chapter' => 'required|integer|min:1',
-    //         'pack' => 'required|string|in:base,plus,premium',
-    //     ]);
-
-    //     // Recupera i dati completi del pacchetto scelto
-    //     // Log::info('PACCHETTO STRIPE', ['pack' => $bookData['pack']]);
-    //     $packCode = $validated['pack'];
-    //     $pacchetti = config('pacchetti');
-
-    //     if (!array_key_exists($packCode, $pacchetti)) {
-    //         return redirect()->back()->withErrors(['pack' => 'Pacchetto non valido']);
-    //     }
-
-    //     $packData = $pacchetti[$packCode];
-
-    //     //DATI SALVATI TEMPORANEAMENTE IN CACHE CON UN TOKEN
-    //     $token = Str::uuid()->toString();
-
-
-    //     cache()->put("book_data_$token", array_merge($validated, [
-    //         'price' => $packData['price'],
-    //         'name' => $packData['name'],
-    //         // 'descrizione_pacchetto' => $packData['descrizione'],
-    //     ]), now()->addMinutes(15));
-
-    //     session(['temp_token' => $token]);
-
-    //     // /auth/google?token=abc123&next_action=stripe
-
-    //     if (!auth()->check()) {
-    //         //autenticazione google con token per dati di sessione
-    //         return redirect()->route('auth.google', ['token' => $token,'next_action' => 'stripe']);
-    //     }
-
-    //     // indirizzamento a stripe con dati di sessione
-    //     return redirect()->route('stripe.checkout', ['token' => $token]);
-
-    // }
+    
 
     public function startCheckout(Request $request)
     {
@@ -201,10 +155,6 @@ class BookController extends Controller
     }
 
 
-    
-
-
-    
 
     public function complete2(Request $request)
     {

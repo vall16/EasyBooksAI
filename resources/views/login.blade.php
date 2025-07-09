@@ -41,7 +41,8 @@
       class="w-full max-w-[400px]"
       x-show="!$store.global.isDarkModeEnabled"
       
-      src="{{ asset('images/welcome.png') }}"
+      
+      src="{{ asset('images/welcomebook.jpeg') }}"
       alt="image"
     />
     <img
